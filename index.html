@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anudeep Adari | Hybrid Cloud & VMware Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #005696;
+            --gradient-start: #1e4f91;
+            --gradient-end: #2da1db;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: #f3f4f6; color: var(--text-dark); }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: var(--white);
+            padding-bottom: 80px;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-weight: 500; opacity: 0.9; }
+        .nav-links a:hover { opacity: 1; }
+        .btn-outline { 
+            border: 1px solid rgba(255,255,255,0.5); 
+            padding: 8px 20px; 
+            border-radius: 20px; 
+        }
+
+        /* --- Hero Section --- */
+        .hero-content {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 700; }
+        .subtitle { font-size: 1.1rem; opacity: 0.9; font-weight: 300; margin-bottom: 5px; }
+
+        /* --- Timeline Section --- */
+        .section-title { text-align: center; font-size: 2rem; margin: 60px 0 40px; color: var(--text-dark); }
+        
+        .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-top: 40px;
+            min-width: 800px; /* Ensure scrolling on small screens */
+        }
+
+        /* The horizontal line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 52px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #e5e7eb;
+            z-index: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            text-align: center;
+            flex: 1;
+            z-index: 1;
+            padding: 0 10px;
+        }
+
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            background: var(--gradient-end);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 0 1px #e5e7eb;
+        }
+
+        .timeline-date { font-size: 0.85rem; color: var(--text-light); margin-top: 5px; display: block; }
+        .timeline-title { font-weight: 700; color: var(--primary-blue); font-size: 0.95rem; }
+        .timeline-desc { font-size: 0.85rem; color: var(--text-light); margin-top: 5px; }
+
+        /* --- Projects Grid --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0 80px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-img-placeholder {
+            height: 160px;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 3rem;
+        }
+
+        .card-content { padding: 25px; flex-grow: 1; }
+        .card-tag { 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            color: var(--gradient-end); 
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .card h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--text-dark); }
+        .card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.5; }
+
+        /* --- Footer --- */
+        footer { text-align: center; padding: 40px; background: var(--white); border-top: 1px solid #e5e7eb; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+            .timeline { flex-direction: column; padding-left: 20px; }
+            .timeline::before { width: 2px; height: 100%; top: 0; left: 29px; }
+            .timeline-item { text-align: left; padding-left: 30px; margin-bottom: 30px; }
+            .timeline-dot { position: absolute; left: 0; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Anudeep Adari</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#" class="btn-outline">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <img src="PXL_20251018_094211501.PORTRAIT~2.jpg" alt="Anudeep Adari" class="profile-img">
+        
+        <h1>Anudeep Adari</h1>
+        <p class="subtitle">Hybrid Cloud Engineer | VMware Administrator | Windows Server Specialist</p>
+        <p class="subtitle" style="opacity: 0.7; font-size: 0.9rem;">Visakhapatnam, Andhra Pradesh</p>
+    </div>
+</header>
+
+<h2 class="section-title">VMware Administration Lifecycle</h2>
+
+<div class="timeline-container">
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-title">ESXi Deployment</span>
+            <span class="timeline-date">Phase 1</span>
+            <p class="timeline-desc">Bare-metal installation & network config via DCUI.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-title">vCSA Setup</span>
+            <span class="timeline-date">Phase 2</span>
+            <p class="timeline-desc">Stage 1 OVA deploy & Stage 2 SSO config.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-title">Datacenter Config</span>
+            <span class="timeline-date">Phase 3</span>
+            <p class="timeline-desc">Cluster creation, HA/DRS rules & vSwitch setup.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-title">Monitoring</span>
+            <span class="timeline-date">Phase 4</span>
+            <p class="timeline-desc">vRealize (Aria) Operations integration.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-title">Maintenance</span>
+            <span class="timeline-date">Ongoing</span>
+            <p class="timeline-desc">Lifecycle Manager patching & upgrades.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">Projects</h2>
+    
+    <div class="grid">
+        <div class="card">
+            <div class="card-img-placeholder">
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="card-content">
+                <span class="card-tag">Infrastructure</span>
+                <h3>vSphere Optimization</h3>
+                <p>Managed 150+ VMs for Central Bank of India. Reduced compute bottlenecks by 25% through advanced HA/DRS tuning and resource pool management.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%); color: white;">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="card-content">
+                <span class="card-tag">Documentation</span>
+                <h3>vCenter 8 Workstation SOP</h3>
+                <p>Authored a complete SOP for installing vCenter 8 on VMware Workstation without ESXi. Includes critical OVF descriptor workarounds for lab setups.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0078d4 0%, #2b88d8 100%); color: white;">
+                <i class="fab fa-windows"></i>
+            </div>
+            <div class="card-content">
+                <span class="card-tag">Security</span>
+                <h3>Server Hardening</h3>
+                <p>Administered 100+ Windows Servers for Clorox. Applied OS patches and GPO-based hardening measures in full compliance with CIS standards.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Anudeep Adari</strong></p>
+    <p>+91 6281102066 | anudeepvamsi2@gmail.com</p>
+    <div style="margin-top: 15px;">
+        <a href="#" style="color: var(--primary-blue); font-weight: 700;">LinkedIn Profile</a>
+    </div>
+    <p><small style="color: #999; display: block; margin-top: 20px;">&copy; 2026 Anudeep Adari</small></p>
+</footer>
+
+</body>
+</html>
