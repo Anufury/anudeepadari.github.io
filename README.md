@@ -1,2 +1,0 @@
-Anudeep Adari
-VMware Consultant
