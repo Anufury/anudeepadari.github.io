@@ -579,6 +579,10 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            cursor: pointer;
         }
 
         .sop-card::before {
@@ -597,8 +601,9 @@
         }
 
         .sop-card:hover {
-            transform: translateX(8px);
+            transform: translateX(8px) translateY(-5px);
             border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
         }
 
         .sop-header {
@@ -1399,7 +1404,7 @@
         </div>
 
         <div class="sops-grid">
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-installation/GUID-B2F01BF5-078A-4C7E-B505-5DFFED0B8C38.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fab fa-linux"></i>
@@ -1423,9 +1428,9 @@
                         <strong>Post-Install:</strong> Enable SSH, configure NTP servers, license host, join to vCenter
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-installation/GUID-2F3F2CF2-7D9E-4B35-848F-D61D5E80E9C9.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-database"></i>
@@ -1449,9 +1454,9 @@
                         <strong>Stage 2 Complete:</strong> Configure time sync, SSH access, CEIP, and verify services
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-availability/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-cloud"></i>
@@ -1475,9 +1480,9 @@
                         <strong>VM Overrides:</strong> Set per-VM HA/DRS rules for critical workloads
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-networking/GUID-375B45C7-684C-4C51-BA3C-70E48DFABF04.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-network-wired"></i>
@@ -1501,9 +1506,9 @@
                         <strong>Security:</strong> Enable promiscuous mode if needed, set MAC address changes policy
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://learn.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fab fa-windows"></i>
@@ -1527,9 +1532,9 @@
                         <strong>Audit Logging:</strong> Enable advanced audit policies, forward logs to SIEM
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-lifecycle-manager/GUID-74295A37-E8BB-4EB9-BFBA-47B78F0C570D.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-sync-alt"></i>
@@ -1553,9 +1558,9 @@
                         <strong>Validate:</strong> Verify all hosts compliant, check for hardware compatibility issues
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-esxi-upgrade/GUID-E0D3C8B4-2F9E-44BE-A2D8-9B6F5E0C2C0A.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-download"></i>
@@ -1579,9 +1584,9 @@
                         <strong>Exit Maintenance:</strong> Exit maintenance mode, remove snapshots, monitor alerts
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vm-administration/GUID-FE6C6379-4C95-4B1C-B46D-D8C9B3B9C9C9.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-exchange-alt"></i>
@@ -1605,9 +1610,9 @@
                         <strong>Validation:</strong> Test application functionality, decommission physical/old VM
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fab fa-microsoft"></i>
@@ -1631,9 +1636,9 @@
                         <strong>Monitor:</strong> Set up Azure Monitor, configure alerts, review compliance status
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-NSX-T-Data-Center/index.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-shield-alt"></i>
@@ -1657,9 +1662,9 @@
                         <strong>Monitor Traffic:</strong> Use NSX Intelligence/Flow Monitoring for traffic visualization
                     </li>
                 </ol>
-            </div>
+            </a>
 
-            <div class="sop-card fade-in">
+            <a href="https://docs.vmware.com/en/VMware-Horizon/index.html" target="_blank" class="sop-card fade-in">
                 <div class="sop-header">
                     <div class="sop-icon">
                         <i class="fas fa-desktop"></i>
@@ -1683,7 +1688,7 @@
                         <strong>User Access:</strong> Configure entitlements, set up Unified Access Gateway for remote access
                     </li>
                 </ol>
-            </div>
+            </a>
         </div>
     </section>
 
